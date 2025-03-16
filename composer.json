@@ -1,5 +1,5 @@
 {
-    "name": "aerni/livewire-forms",
+    "name": "krzemo/livewire-forms",
     "description": "A Statamic forms framework powered by Laravel Livewire",
     "keywords": [
         "statamic",
