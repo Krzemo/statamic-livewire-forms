@@ -18,7 +18,7 @@ trait HandlesValues
     protected function processedValues(): Collection
     {
         return $this->fields
-            ->filter(fn ($field) => $this->submittableFields[$field->handle])
+            ->filter(fn ($field) => $this->submittableFields[$field->handle] ?? true)
             ->map(fn ($field) => $field->process());
     }
 

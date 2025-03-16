@@ -19,7 +19,7 @@ trait HandlesValidation
              * This allows us to conditionally apply validation to conditionally shown fields using the 'sometimes' rule.
              */
             collect($validator->getValue('fields'))
-                ->filter(fn ($value, $field) => $this->submittableFields[$field])
+                ->filter(fn ($value, $field) => $this->submittableFields[$field] ?? true)
                 ->pipe(fn ($fields) => $validator->setValue('fields', $fields));
 
             /**
